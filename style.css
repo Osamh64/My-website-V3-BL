@@ -1,0 +1,639 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+
+/* Variables */
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --text-color: #000;
+}
+
+/* Header and Footer */
+header,
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 0; /* Smaller padding for header and footer */
+    text-align: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure header and footer stay on top */
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to left and right */
+}
+
+footer {
+    bottom: 0;
+}
+
+/* Header Elements */
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.header-left a {  
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-left a:hover {
+    text-decoration: underline;
+    cursor: pointer; /* هذا الجزء يغير شكل الفأرة */
+}
+
+.header-right a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+    cursor: pointer; /* هذا الجزء يغير شكل الفأرة */
+}
+
+
+/* Main Content */
+main {
+    padding: 60px 20px 20px; /* Adjust padding to account for header */
+    text-align: right;
+}
+
+/* Table */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+#story-list {
+    padding-right: 25px !important;
+}
+
+/* Story List */
+.story-list {
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+/* Footer Adjustments */
+body {
+    padding-bottom: 40px; /* Adjust to prevent content overlap with footer */
+}
+
+/* Additional Styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Category Box */
+.category-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-right: 10px; /* تعديل القيمة الجديدة */
+    padding-left: 10px;  /* تعديل القيمة الجديدة */
+    margin: 20px;
+    margin-left: 130px; /* إضافة القيمة الجديدة */
+    margin-right: 130px; /* إضافة القيمة الجديدة */
+}
+
+
+.category-box ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-box a {
+    display: block; 
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
+    text-align: center;
+}
+
+/* Account Links */
+.account-links {
+    color: black;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+
+/* Aside Page */
+.aside-page {
+    position: relative;
+}
+
+/* Location */
+.location {
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    vertical-align: top;
+}
+
+/* User */
+.User {
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 150px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: center; 
+}
+
+/* Search */
+.Search {
+    text-align: center;
+    width: 50%;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    margin: 50px auto 20px; /* This includes the top margin */
+}
+
+
+/* Story Title and Author */
+.story-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.story-author {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* Read a Story */
+.Read-a-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* Adjust Text */
+.adjust-text {
+    text-align: right;
+    font-size: medium;
+}
+
+#text-big {
+    font-size: large;
+}
+
+#text-small {
+    font-size: small;
+}
+
+/* Subscription Cards */
+body.subscription {
+    background-color: #f9f9f9;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    font-family: 'Raleway';
+}
+
+.payment-title {
+    width: 100%;
+    text-align: center;
+}
+
+.form-container .field-container:first-of-type {
+    grid-area: name;
+}
+
+.form-container .field-container:nth-of-type(2) {
+    grid-area: number;
+}
+
+.form-container .field-container:nth-of-type(3) {
+    grid-area: expiration;
+}
+
+.form-container .field-container:nth-of-type(4) {
+    grid-area: security;
+}
+
+.field-container input {
+    box-sizing: border-box;
+}
+
+.field-container {
+    position: relative;
+}
+
+.form-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 90px 90px 90px;
+    grid-template-areas: 
+        "name name"
+        "number number"
+        "expiration security";
+    max-width: 400px;
+    padding: 20px;
+    color: #707070;
+}
+
+.ccicon {
+    height: 38px;
+    position: absolute;
+    right: 6px;
+    top: calc(50% - 17px);
+    width: 60px;
+}
+
+/* CREDIT CARD IMAGE STYLING */
+.preload * {
+    transition: none !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    max-height: 251px;
+    height: 54vw;
+    padding: 20px;
+}
+
+#ccsingle {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+#ccsingle svg {
+    width: 100px;
+    max-height: 60px;
+}
+
+.creditcard svg#cardfront,
+.creditcard svg#cardback {
+    width: 100%;
+    box-shadow: 1px 5px 6px 0px black;
+    border-radius: 22px;
+}
+
+#generatecard {
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    padding: 2px 4px;
+    background-color: #909090;
+    border-radius: 4px;
+}
+
+/* CHANGEABLE CARD ELEMENTS */
+.creditcard .lightcolor,
+.creditcard .darkcolor {
+    transition: fill .5s;
+}
+
+.creditcard .lightblue {
+    fill: #03A9F4;
+}
+
+.creditcard .lightbluedark {
+    fill: #0288D1;
+}
+
+.creditcard .red {
+    fill: #ef5350;
+}
+
+.creditcard .reddark {
+    fill: #d32f2f;
+}
+
+creditcard .purple {
+    fill: #ab47bc;
+}
+
+creditcard .purpledark {
+    fill: #7b1fa2;
+}
+
+.creditcard .cyan {
+    fill: #26c6da;
+}
+
+.creditcard .cyandark {
+    fill: #0097a7;
+}
+
+.creditcard .green {
+    fill: #66bb6a;
+}
+
+.creditcard .greendark {
+    fill: #388e3c;
+}
+
+.creditcard .lime {
+    fill: #d4e157;
+}
+
+.creditcard .limedark {
+    fill: #afb42b;
+}
+
+.creditcard .yellow {
+    fill: #ffeb3b;
+}
+
+.creditcard .yellowdark {
+    fill: #f9a825;
+}
+
+.creditcard .orange {
+    fill: #ff9800;
+}
+
+.creditcard .orangedark {
+    fill: #ef6c00;
+}
+
+.creditcard .grey {
+    fill: #bdbdbd;
+}
+
+.creditcard .greydark {
+    fill: #616161;
+}
+
+/* FRONT OF CARD */
+#svgname {
+    text-transform: uppercase;
+}
+
+#cardfront .st2 {
+    fill: #FFFFFF;
+}
+
+#cardfront .st3 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+#cardfront .st4 {
+    font-size: 54.7817px;
+}
+
+#cardfront .st5 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardfront .st6 {
+    font-size: 33.1112px;
+}
+
+#cardfront .st7 {
+    opacity: 0.6;
+    fill: #FFFFFF;
+}
+
+#cardfront .st8 {
+    font-size: 24px;
+}
+
+#cardfront .st9 {
+    font-size: 36.5498px;
+}
+
+#cardfront .st10 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+}
+
+#cardfront .st11 {
+    font-size: 16.1716px;
+}
+
+#cardfront .st12 {
+    fill: #4C4C4C;
+}
+
+/* BACK OF CARD */
+#cardback .st0 {
+    fill: none;
+    stroke: #0F0F0F;
+    stroke-miterlimit: 10;
+}
+
+#cardback .st2 {
+    fill: #111111;
+}
+
+#cardback .st3 {
+    fill: #F2F2F2;
+}
+
+#cardback .st4 {
+    fill: #D8D2DB;
+}
+
+#cardback .st5 {
+    fill: #C4C4C4;
+}
+
+#cardback .st6 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardback .st7 {
+    font-size: 27px;
+}
+
+#cardback .st8 {
+    opacity: 0.6;
+}
+
+#cardback .st9 {
+    fill: #FFFFFF;
+}
+
+#cardback .st10 {
+    font-size: 24px;
+}
+
+#cardback .st11 {
+    fill: #EAEAEA;
+}
+
+#cardback .st12 {
+    font-family: 'Rock Salt', cursive;
+}
+
+#cardback .st13 {
+    font-size: 37.769px;
+}
+
+/* FLIP ANIMATION */
+.container {
+    perspective: 1000px;
+}
+
+.creditcard {
+    width: 100%;
+    max-width: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.creditcard .front,
+.creditcard .back {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    backface-visibility: hidden;
+    color: #47525d;
+}
+
+.creditcard .back {
+    transform: rotateY(180deg);
+}
+
+.creditcard.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Card */
+
+
+.notification-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* يمكنك تعديل العرض حسب الحاجة */
+    max-width: 600px; /* يمكنك تعديل العرض الأقصى حسب الحاجة */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Title */
+.title {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+/* Category Title */
+.category-title {
+    margin-left: 15px;
+    color: #000; /* تغيير اللون حسب الحاجة */
+    text-decoration: none;
+}
+
+.category-title:hover {
+    text-decoration: underline;
+}
+
